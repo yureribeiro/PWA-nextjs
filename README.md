@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Seu Projeto Next.js com next-pwa
 
-## Getting Started
+Este é um projeto Next.js configurado com next-pwa para adicionar funcionalidades de Progressive Web App (PWA). O next-pwa facilita a criação de um Service Worker e fornece várias opções de configuração para otimizar a experiência do usuário.
 
-First, run the development server:
+## Configuração
+
+### Instalação
+
+Certifique-se de ter o Node.js instalado em sua máquina. Clone este repositório e instale as dependências:
+
+```bash
+npm install
+```
+
+# Executando o Projeto
+Execute o projeto em modo de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O aplicativo estará acessível em http://localhost:3000/.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Configuração do next-pwa
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Gere o arquivo manifest.json:
+public/manifest.json:
+```JSON
+{ 
+  "name": "Next-13 PWA",
+  "short_name": "PWA",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+  ], 
+  "splash_pages": null 
+}
+```
 
-## Learn More
+# Instale o pacote next-pwa:
 
-To learn more about Next.js, take a look at the following resources:
+O pacote [next-pwa](https://www.npmjs.com/package/next-pwa) oferece vários recursos que facilitam a criação de PWAs, incluindo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Geração e registro de trabalhadores de serviço
+Cache
+Suporte off-line
+Geração de arquivo de manifesto
+Metatags principais
+Para instalar o pacote next-pwa execute o seguinte comando em seu terminal:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A configuração do next-pwa está no arquivo next.config.js. Certifique-se de ajustar as opções de acordo com suas necessidades.
 
-## Deploy on Vercel
+Recursos Adicionais
+[Documentação do Next.js](https://nextjs.org/docs)
+[next-pwa Repository](https://www.npmjs.com/package/next-pwa)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Após essas configurações, deve aparecer no seu browser um icone para baixar a versão pwa do seu app.
