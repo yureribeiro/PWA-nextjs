@@ -24,7 +24,9 @@ O aplicativo estará acessível em http://localhost:3000/.
 # Configuração do next-pwa
 
 ## Gere o arquivo manifest.json:
+
 public/manifest.json:
+
 ```JSON
 { 
   "name": "Next-13 PWA",
@@ -47,18 +49,23 @@ public/manifest.json:
 }
 ```
 
-# Instale o pacote next-pwa:
+## Instale o pacote next-pwa:
 
 O pacote [next-pwa](https://www.npmjs.com/package/next-pwa) oferece vários recursos que facilitam a criação de PWAs, incluindo:
 
-Geração e registro de trabalhadores de serviço
-Cache
-Suporte off-line
-Geração de arquivo de manifesto
-Metatags principais
-Para instalar o pacote next-pwa execute o seguinte comando em seu terminal:
+- Geração e registro de trabalhadores de serviço;
+- Cache;
+- Suporte off-line;
+- Geração de arquivo de manifesto;
+- Metatags principais;
 
-A configuração do next-pwa está no arquivo next.config.js. Certifique-se de ajustar as opções de acordo com suas necessidades.
+## Para instalar o pacote next-pwa execute o seguinte comando em seu terminal:
+
+```Bash
+  npm i next-pwa
+```
+
+## A configuração do next-pwa está no arquivo next.config.js. Certifique-se de ajustar as opções de acordo com suas necessidades.
 
 Recursos Adicionais
 [Documentação do Next.js](https://nextjs.org/docs)
